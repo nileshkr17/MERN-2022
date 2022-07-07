@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" type="image/png" href="reg.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mingzat&family=Overpass&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="main">
+        <h1>Registration form</h1>
+        <hr>
+        <form id="f1">
+            <table>
+                <tr>
+                    <td>
+                        Name
+                    </td>
+                    <td>
+                        <input type="text" id="uname" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email
+                    </td>
+                    <td>
+                        <input type="text" id="uemail" name="usermail">
+                       
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Age
+                    </td>
+                    <td>
+                        <input type="text"  id="age" size="2" maxlength="2">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Phone
+                    </td>
+                    <td>
+                        <input type="text" id="phone" placeholder="91---------";size="10" maxlength="10">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Country
+                    </td>
+                    <td>
+                        <input type="text" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            Password
+                    </td>
+                    <td>
+                            <input type="password" id="pass">
+                    </td>
+                </tr>
+               
+                <tr>
+                   
+                </tr>
+                <tr>
+                    <td>
+                        Gender
+                    </td>
+                    <td>
+                        
+                            <input type="radio" value="f"> Female
+                            <label>
+                            <input value="m" type="radio"> Male</label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            <label for="city">City</label>
+                    </td>
+                    <td>
+                            <select id="city" name="city">
+                                <option disabled selected>--Choose City--</option>
+                                    
+                                        <option>New Delhi</option>
+                                        <option>Mumbai</option>
+                                        <option>Channai</option>
+                                        <option>Kolkata</option>
+                                        <option>Noida</option>
+                                        <option>Gurgram</option>
+                                        <option>Faridabad</option>
+                                        <option>Gaziabad</option>
+                                    
+                            </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label>Address</label>
+                    </td>
+                    <td>
+                        <textarea rows="4" cols="40"></textarea>
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td></td>
+                    
+                    <td>
+                        <input id="checkbox" required type="checkbox" />
+  <label for="checkbox"> I agree to these .</label>
+                        <input type="submit" value="Submit">
+                        <input type="reset">
+                    </td>
+                </tr>
+                
+            </table>
+        </form>
+    </div>
+</body>
+</html>

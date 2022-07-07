@@ -1,0 +1,33 @@
+body{
+    background-color: #a4a2a8;
+}
+h1{
+    color:whitesmoke;
+    font-family:'Roboto',sans-serif;
+    font-size: 3em;
+    padding: 30px;
+    margin-top: -.999rem;
+    text-align: center;
+     background-color: #b04238;
+}
+#tab { 
+    border: solid ; 
+    width: 100%;
+  }
+  
+
+  #tab td { 
+    border: solid;
+    padding: 0.5rem 2rem;
+  }
+  #tab th{
+    border: solid;
+    padding: 0.5rem 2rem;
+  }
+  
+  #tab th { 
+    font-weight: normal; 
+  } 
+  body {
+    padding: 1rem;
+  }
