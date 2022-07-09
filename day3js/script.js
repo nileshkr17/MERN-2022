@@ -8,15 +8,18 @@ function ass1()
        myArray[i]=parseInt(prompt('Enter the array element '+(i+1)));
     }
     for(let i=0;i<num;i++){
-    
         if(myArray[i]>=0&&myArray[i]%2==0 && myArray[i]%3==0)
         {
             sum+=myArray[i];
         }
     }
     document.write('Sum of the digits is: '+sum);
+    document.write('\n\n\n\narray: '+myArray);
  
     }
+
+
+
 /*---Assignment 2----*/
 function ass2()
 {
