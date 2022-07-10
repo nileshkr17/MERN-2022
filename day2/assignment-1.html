@@ -9,17 +9,19 @@
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Mingzat&family=Overpass&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mingzat&family=Overpass&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    
 </head>
 
 <body>
+    <div class="header">Info Table</div>
     <div id="main">
-        <h1>Registration form</h1>
-        <hr>
+        
+       
         <form id="f1">
             <table>
                 <tr>
-                    <td>
+                    <td id="name">
                         Name
                     </td>
                     <td>
@@ -27,7 +29,7 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td id="email">
                         Email
                     </td>
                     <td>
@@ -36,35 +38,35 @@
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td id="age">
                         Age
                     </td>
                     <td>
-                        <input type="text"  id="age" size="2" maxlength="2">
+                        <input type="text"  id="uage" size="2" maxlength="2">
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td id="phone">
                         Phone
                     </td>
-                    <td>
-                        <input type="text" id="phone" placeholder="91---------";size="10" maxlength="10">
+                    <td >
+                        <input type="text" id="uphone";size="10" maxlength="10">
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td id="opt">
                         Country
                     </td>
                     <td>
-                        <input type="text" >
+                        <input id="uopt" type="text" >
                     </td>
                 </tr>
                 <tr>
-                    <td>
+                    <td id="pass">
                             Password
                     </td>
                     <td>
-                            <input type="password" id="pass">
+                            <input type="password" id="upass">
                     </td>
                 </tr>
                
@@ -72,53 +74,32 @@
                    
                 </tr>
                 <tr>
-                    <td>
+                    <td id="gen">
                         Gender
                     </td>
-                    <td>
-                        
-                            <input type="radio" value="f"> Female
-                            <label>
-                            <input value="m" type="radio"> Male</label>
+                    <td >
+                            <input type="radio" name="test" value="Female"> Female
+                            <input type="radio" name="test" value="Male"> Male
                     </td>
                 </tr>
+               
                 <tr>
                     <td>
-                            <label for="city">City</label>
+                        <label id="add">Address</label>
                     </td>
-                    <td>
-                            <select id="city" name="city">
-                                <option disabled selected>--Choose City--</option>
-                                    
-                                        <option>New Delhi</option>
-                                        <option>Mumbai</option>
-                                        <option>Channai</option>
-                                        <option>Kolkata</option>
-                                        <option>Noida</option>
-                                        <option>Gurgram</option>
-                                        <option>Faridabad</option>
-                                        <option>Gaziabad</option>
-                                    
-                            </select>
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label>Address</label>
-                    </td>
-                    <td>
-                        <textarea rows="4" cols="40"></textarea>
+                    <td >
+                        <textarea rows="4" id="uadd"cols="30"></textarea>
                     </td>
                 </tr>
                 
                 <tr>
                     <td></td>
                     
-                    <td>
+                    <td >
                         <input id="checkbox" required type="checkbox" />
   <label for="checkbox"> I agree to these .</label>
-                        <input type="submit" value="Submit">
-                        <input type="reset">
+                        <input type="submit" id="submit"value="Submit">
+                        <input type="reset" id="reset" value="Reset">
                     </td>
                 </tr>
                 

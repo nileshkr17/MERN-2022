@@ -1,29 +1,66 @@
-body{
-    background: #4776E6;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #8E54E9, #4776E6);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #8E54E9, #4776E6); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-
+*{
+    margin:0;
+    padding:0;
+    background: #373F51;
+}
+.header{
+    background-color: #1B1B1E;
+    top: 0px;
+    padding-top: 50px;
+    text-align: center;
+    font-family: ubuntu;
+    font-size: 3rem;
+    padding-bottom: 40px;
+    color: #58A4B0;
+    position: sticky;
 }
 h1{
-    font-family: overpass;
+    font-family: ubuntu;
     text-decoration: underline;
-    margin-top: rem;
     text-align: center;
-     background: #351e98;
-     padding: 30px;
+    background: #351e98;
+    padding: 30px;
+    top:0px;
+     
+}
+#main{
+    display: flex;
 }
 
 #f1{
     padding: 40px;
-    background-color: white;
     margin: auto;
-    margin-top: 100px;
-    width: 400px;
+    margin-top: 40px;
+    width: 600px;
+    height: 60vh;
     font-size: 18px;
     border-radius: 10px;
     box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, .4);
-    min-height: 100px;
-    font-family: overpass;
+    font-family: ubuntu;
+    display: flex;
     
+}
+#name,#email,#age,#phone,#opt,#pass,#gen,#city,#add{
+    font-size:30px ;
+    padding-right: 40px;
+    padding-bottom: 15px;
+    font-weight: bold;
+    display: flex;
+}
+#uname ,#uemail,#uage,#uphone,#uopt,#upass,#ucity,#uadd{
+    border-radius: 10px;
+    font-size: 20px;
+    padding: 5px;
+    margin:auto;
+    border: solid 3px;
+}
+#submit,#reset{
+    border-radius: 10px;
+    padding: 5px;
+    color: whitesmoke;
+    background-color: black;
+    font-family: ubuntu;
+}
+#checkbox{
+    margin-top: 10px;
 }
