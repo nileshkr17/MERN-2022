@@ -19,13 +19,14 @@
         
        
         <form id="f1">
+            <div class="error_msg" style="display: none;"></div>
             <table>
                 <tr>
-                    <td id="name">
+                    <td id="name" >
                         Name
                     </td>
                     <td>
-                        <input type="text" id="uname" >
+                        <input type="text" value="" id="uname" >
                     </td>
                 </tr>
                 <tr>
@@ -33,7 +34,7 @@
                         Email
                     </td>
                     <td>
-                        <input type="text" id="uemail" name="usermail">
+                        <input type="email" id="uemail" value="" name="usermail">
                        
                     </td>
                 </tr>
@@ -42,7 +43,7 @@
                         Age
                     </td>
                     <td>
-                        <input type="text"  id="uage" size="2" maxlength="2">
+                        <input type="text" value="" inputmode="numeric" id="uage" size="2" maxlength="2">
                     </td>
                 </tr>
                 <tr>
@@ -50,23 +51,16 @@
                         Phone
                     </td>
                     <td >
-                        <input type="text" id="uphone";size="10" maxlength="10">
+                        <input type="text" value="" id="uphone";size="10" inputmode="numeric" maxlength="10">
                     </td>
                 </tr>
-                <tr>
-                    <td id="opt">
-                        Country
-                    </td>
-                    <td>
-                        <input id="uopt" type="text" >
-                    </td>
-                </tr>
+                
                 <tr>
                     <td id="pass">
                             Password
                     </td>
                     <td>
-                            <input type="password" id="upass">
+                            <input type="password" value="" minlength="8" id="upass">
                     </td>
                 </tr>
                
@@ -77,9 +71,9 @@
                     <td id="gen">
                         Gender
                     </td>
-                    <td >
-                            <input type="radio" name="test" value="Female"> Female
-                            <input type="radio" name="test" value="Male"> Male
+                    <td id="gender">
+                            <input type="radio" name="rate" id="g1" value="Female"> Female
+                            <input type="radio" name="rate" id="g2" value="Male"> Male
                     </td>
                 </tr>
                
@@ -88,7 +82,7 @@
                         <label id="add">Address</label>
                     </td>
                     <td >
-                        <textarea rows="4" id="uadd"cols="30"></textarea>
+                        <input  id="uadd" value="" ></input>
                     </td>
                 </tr>
                 
@@ -96,7 +90,7 @@
                     <td></td>
                     
                     <td >
-                        <input id="checkbox" required type="checkbox" />
+                        <input id="checkbox"  type="checkbox" />
   <label for="checkbox"> I agree to these .</label>
                         <input type="submit" id="submit"value="Submit">
                         <input type="reset" id="reset" value="Reset">
@@ -107,4 +101,5 @@
         </form>
     </div>
 </body>
+<script src="regform.js"></script>
 </html>
