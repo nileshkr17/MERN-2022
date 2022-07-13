@@ -1,0 +1,15 @@
+*{
+    margin:0;
+    padding:0;
+    background: #373F51;
+}
+.header{
+    background-color: #1B1B1E;
+    top: 0px;
+    padding-top: 50px;
+    padding-bottom: 40px;
+    font-family: ubuntu;
+    font-size: 3rem;
+    color: #58A4B0;
+    position: sticky;
+}
