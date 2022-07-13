@@ -1,28 +1,26 @@
 const prompt = require('prompt-sync')();
 const fs = require('fs');
-function User(id,name,email,phone)//construtor func
+function Item(name,qun,price)//construtor func
 {
     this.name=name;
-    this.email=email;
-    this.id=id;
-    this.phone=phone;
+    this.qun=qun;
+    this.price=price;
 
 }
-exports.addUser=()=>
+exports.addItem=()=>
     {
-        const howmanyusers = prompt('Enter the number of users:');
-        let userArr = [];
-        for(let i=0;i<howmanyusers;i++)
+        const no_of_items = prompt('Enter the number of Items');
+        let itemArr = [];
+        for(let i=0;i<no_of_items;i++)
             {
-                 const name = prompt('Enter user name: ');
-                 const id =prompt('Enter user id:');
-                 const email = prompt('Enter User email:');
-                 const phone = prompt('Enter user phone number:');
-                 const user = new User(name,id,email,phone); //user object passing id email etc
-                 userArr=[...userArr,user];
+                const name= prompt('Enter item name: ');
+                 const qun = prompt('Enter item quantity:');
+                 const price = prompt('Enter item price:');
+                 const item = new Item(name,qun,price); //user object passing id email etc
+                 itemArr=[...itemArr,item];
         //userArr.push(user);
             }
-        fs.writeFile("user.json",JSON.stringify(userArr),(err)=>
+        fs.writeFile("item.json",JSON.stringify(itemArr),(err)=>
         {
              if(err)
              console.log('Something went wrong');
