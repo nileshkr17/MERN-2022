@@ -21,9 +21,8 @@ h1{
     background: #351e98;
     padding: 30px;
     top:0px;
-    width: 100%;
-
-     
+    font-weight: b;
+    width: 100%;   
 }
 #main{
     display: flex;
@@ -39,8 +38,7 @@ h1{
     border-radius: 10px;
     box-shadow: 0px 0px 8px 5px rgba(0, 0, 0, .4);
     font-family: ubuntu;
-    display: flex;
-    
+    display: flex;   
 }
 
 #uname ,#uemail,#uage,#uphone,#uopt,#upass,#ucity,#uadd{
@@ -66,8 +64,4 @@ h1{
     padding-bottom: 15px;
     font-weight: bold;
     display: flex;
-}
-
-#cus1,#cus2,#cus3,#cus4,#cus5{
-   
 }
