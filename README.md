@@ -6,12 +6,14 @@
 - **E** = Express (makes it easier to work with Node.js. We'll use `cors` middleware to access other servers outside our server).
 - **R** = React (for the frontend. We'll use `bootstrap` for styling, `react-router-dom` for React routes, `react-datepicker` for React Datepicker component, and `axios` to connect to the backend).
 - **N** = Node.js (for the server. We'll use `dotenv` to load environment variables from an .env file into `process.env`, and `nodemon` to make the app auto-restart when you edit/save files).
+`package`:-package lock .json ensure that exactly version of your project and the nested dependencies and 
 /*
 Exercise Tracker App:
 
 - Exercises collection
 - Users collection
 - every Exercise has one User
+
 
 To just get it running after you `git clone`, set up [MongoDB Atlas](https://github.com/hchiam/learning-mern-stack#mongodb-atlas), and then follow these CLI steps:
 */
