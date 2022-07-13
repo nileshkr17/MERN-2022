@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="icon" type="image/png" href="reg.png">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mingzat&family=Overpass&family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    
+</head>
+
+<body>
+    <div class="header">Info Table</div>
+    <div id="main">
+        
+       
+        <form id="f1">
+            <div class="error_msg" style="display: none;"></div>
+            <table>
+                <tr>
+                    <td id="name" >
+                        Names
+                    </td>
+                    <td>
+                        <input type="text" placeholder="'nilesh','ujjwal'," value="" id="uname" >
+                    </td>
+                </tr>
+                <tr>
+                    <td id="email">
+                        Emails
+                    </td>
+                    <td>
+                        <input type="email" id="uemail" value="" name="usermail">  
+                    </td>
+                </tr>
+                <tr>
+                    <td id="phone">
+                        Phone numbers
+                    </td>
+                    <td >
+                        <input type="text" value="" id="uphone";size="10" inputmode="numeric" maxlength="10">
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td id="times">
+                            No. of times Shopped
+                    </td>
+                    <td>
+                            <input type="number" value=""  id="utimes">
+                    </td>
+                </tr>
+               
+                
+                
+                <tr>
+                    <td></td>
+                    
+                    <td >
+                        <input id="checkbox"  type="checkbox" />
+                        <label for="checkbox"> I agree to these .</label>
+                        <input type="submit" id="submit"value="Submit">
+                        <input type="reset" id="reset" value="Reset">
+                    </td>
+                </tr>
+                
+            </table>
+        </form>
+        
+        <form id="f1">
+            
+            <h2 style="align-items:center;">Purchased History </h2>
+            <div class="error_msg" style="display: none;"></div> 
+            
+            <table>
+                <tr>
+                    <td id="cus1" >
+                        date_of_purchase, product_name,product_price
+                    </td>
+                    
+                </tr>
+                
+                <tr>
+                    <td id="Customer" >
+                        Customer 1:  
+                    </td>
+                    <td>
+                        <input type="text" value="" placeholder="'01/07/2022','30/06/2022'," id="cus1" >
+                    </td>
+                </tr>
+                <tr>
+                    <td id="Customer" >
+                        Customer 2:  
+                    </td>
+                    <td>
+                        <input type="text" id="cus2" value="" name="item" placeholder="'apple','watch','juice'">  
+                    </td>
+                </tr>
+                <tr>
+                    <td id="Customer" >
+                        Customer 3:  
+                    </td>
+                    <td>
+                        <input type="text" id="cus3" value="" name="item" placeholder="'apple','watch','juice'">  
+                    </td>
+                </tr>
+                
+                <tr>
+                    <td id="Customer" >
+                        Customer 4:  
+                    </td>
+                    <td>
+                        <input type="text" id="cus4" value="" name="item" placeholder="'apple','watch'">  
+                    </td>
+                </tr>
+                <tr>
+                    <td id="Customer" >
+                        Customer 5:  
+                    </td>
+                    <td>
+                        <input type="text" id="cus5" value="" name="item" placeholder="'apple','watch','juice'">  
+                    </td>
+                    
+                </tr>
+        
+                
+            </table>
+
+        </form>
+        
+    </div>
+    
+</body>
+<script src="objCust.js"></script>
+</html>

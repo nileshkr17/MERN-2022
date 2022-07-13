@@ -42,13 +42,7 @@ h1{
     display: flex;
     
 }
-#name,#email,#age,#phone,#opt,#pass,#gen,#city,#add{
-   border-radius: 10px;
-    font-size: 20px;
-    padding: 5px;
-    margin:auto;
-    border: solid 3px;
-}
+
 #uname ,#uemail,#uage,#uphone,#uopt,#upass,#ucity,#uadd{
     border-radius: 10px;
     font-size: 20px;
@@ -66,16 +60,14 @@ h1{
 #checkbox{
     margin-top: 10px;
 }
-#Customer{
-    font-size:100px ;
+#customer{
+    font-size:10px ;
     padding-right: 40px;
     padding-bottom: 15px;
     font-weight: bold;
+    display: flex;
 }
+
 #cus1,#cus2,#cus3,#cus4,#cus5{
-    border-radius: 10px;
-    font-size: 20px;
-    padding: 5px;
-    margin:auto;
-    border: solid 3px;
+   
 }
