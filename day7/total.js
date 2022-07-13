@@ -1,7 +1,7 @@
 const prompt = require('prompt-sync')();
 const no_of_items= require('./create');
 const fs = require('fs');
-function Item(name,qun,price)//construtor func
+function Item(name,qun,price)//construtor function
 {
     this.name=name;
     this.qun=qun;
