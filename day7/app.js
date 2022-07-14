@@ -3,15 +3,18 @@ const {addItem} =require('./create');
 const {updateItem} =require('./update');
 const {deleteItem} =require('./delete');
 const prompt = require('prompt-sync')();
-
+prompt('To add item: add \t To update item: update \t To delete item: delete');
 const operation = prompt('Which of the following you want to do: ');
 /*
  add
- updtae
+ update
  list
  del
+ 
 
 */
+
+
 switch(operation){
     case 'add':
                 //createUser.addUser()
