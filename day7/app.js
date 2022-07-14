@@ -6,15 +6,6 @@ const {total} =require('./total');
 const prompt = require('prompt-sync')();
 prompt('\nTo add item: add \n To update item: update \n To delete item: delete \n Total: total');
 const operation = prompt('Which of the following you want to do: ');
-/*
- add
- update
- list
- del
- 
-
-*/
-
 
 switch(operation){
     case 'add':
@@ -26,7 +17,11 @@ switch(operation){
                     updateItem(price,name);
                     break;
     case 'delete':
-                     
+                          if(itemArr.length===0)
+                             {
+                                    return(console.log("List is empty!"));
+            
+                             }
                      let p = prompt('Enter the price of that item:');
                      let n = prompt('Enter the item name you want to update(case sensi): ');
                      let qun = prompt('Enter the qunatity of that item:');
