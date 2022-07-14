@@ -2,8 +2,9 @@
 const {addItem} =require('./create');
 const {updateItem} =require('./update');
 const {deleteItem} =require('./delete');
+const {total} =require('./total');
 const prompt = require('prompt-sync')();
-prompt('To add item: add \t To update item: update \t To delete item: delete');
+prompt('\nTo add item: add \n To update item: update \n To delete item: delete \n Total: total');
 const operation = prompt('Which of the following you want to do: ');
 /*
  add
