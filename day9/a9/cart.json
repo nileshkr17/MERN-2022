@@ -1,0 +1,51 @@
+/*//diff btw 01 and 1*/
+[
+    {
+        "productID" :1, 
+        "productOfName" : "Laptop : MSI-GF63",
+        "quantityOfProduct" : 1,
+        "priceOfOne": 54000
+
+        
+    },
+    {
+        "productID" :2,
+        "productOfName" : "amul: milk",
+        "quantityOfProduct" : 1,
+        "priceOfOne": 63
+
+        
+    },
+    {
+        "productID" :3,
+        "productOfName" : "Amul Kool :Drink",
+        "quantityOfProduct" : 10,
+        "priceOfOne": 120
+
+        
+    },
+    {
+        "productID" :4,
+        "productOfName" : "Bag : Skybag",
+        "quantityOfProduct" : 1,
+        "priceOfOne": 5400
+
+        
+    },
+    {
+        "productID" :5,
+        "productOfName" : "Mouse: Razer DeathAdder",
+        "quantityOfProduct" : 1,
+        "priceOfOne": 1375
+
+        
+    },
+    {
+        "productID" :7,
+        "productOfName" : "Laptop : MSI-GF63",
+        "quantityOfProduct" : 1,
+        "priceOfOne": 54000
+
+        
+    }
+]
