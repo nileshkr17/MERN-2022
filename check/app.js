@@ -1,11 +1,11 @@
 const express = require('express');
-const courseRoutes = require('./routes/course'); 
+const cartRoutes = require('./routes/cart'); 
 const app = express();
 
 
-const port = 2000;
+const port = 4672;
 app.use(express.json())
-app.use(courseRoutes);
+app.use(cartRoutes);
 
 app.listen(port,()=>{
     console.log(`Server started at port ${port}`);

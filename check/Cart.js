@@ -1,8 +1,9 @@
-function Cart(id,prodcutName,productPrice,productDesc,productDateOfPurchase){
+function Cart(id,productName,productPrice,productDesc,productDateOfPurchase,productImage){
     this.id = id;
-    this.prodcutName = prodcutName;
+    this.productName = productName;
     this.productPrice = productPrice;
     this.productDesc = productDesc;
     this.productDateOfPurchase = productDateOfPurchase;
+    this.productImage = productImage;
 } 
 exports.Cart = Cart;

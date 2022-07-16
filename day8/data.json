@@ -1,18 +1,26 @@
 [
     {
-        "h" : 100,
-        "w" : 200
+        "productId":101231,
+        "productName":"iphone",
+        "productQuantity":10,
+        "productPrice":20
     },
     {
-        "h" : 200,
-        "w" : 300
+        "productId":102123,
+        "productName":"laptop",
+        "productQuantity":20,
+        "productPrice":10
     },
     {
-        "h" : 300,
-        "w" : 400
+        "productId":182232,
+        "productName":"bed",
+        "productQuantity":5,
+        "productPrice":10
     },
     {
-        "h" : 400,
-        "w" : 500
+        "productId":104123,
+        "productName":"bike",
+        "productQuantity":10,
+        "productPrice":20
     }
 ]
