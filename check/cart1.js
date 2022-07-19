@@ -3,19 +3,21 @@ const fs = require('fs');
 const { v4: uuid_v4 } = require('uuid');
 uuid_v4();
 const randomUrl = require('random-url');
-const {Cart} = require('../Cart')
+const {Cart} = require('./Cart')
 const router = express.Router();
 router.get('/',(req,res)=>{
     try{
         const filearray = fs.readdirSync(__dirname);
-        console.log(filearray);
-        console.log(__dirname);
+        console.log(filearray);//cart.js
+        console.log(__dirname);//MERN-2022\check\routes
         let productItem = [];
         let message = '';
-        if(filearray.includes('cart.json'))
-          productItems = JSON.parse(fs.readFileSync('cart.json'));
-        if(productItems.length > 0) 
-              message = 'productItem fetched successfully';
+        if(filearray.includes("cart.json"))
+          productItem = JSON.parse(fs.readFileSync("cart.json"));
+        if(productItem.length > 0) {
+            message = 'productItem fetched successfully';      
+        }
+              
         else
               message = 'No productItem found';      
         return res.status(200).json({
