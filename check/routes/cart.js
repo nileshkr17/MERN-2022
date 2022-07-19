@@ -5,23 +5,22 @@ uuid_v4();
 const randomUrl = require('random-url');
 const {Cart} = require('../Cart')
 const router = express.Router();
-
-
 router.get('/',(req,res)=>{
     try{
         const filearray = fs.readdirSync(__dirname);
         console.log(filearray);
-        let prodcutItem = [];
+        console.log(__dirname);
+        let productItem = [];
         let message = '';
         if(filearray.includes('cart.json'))
-          prodcutItems = JSON.parse(fs.readFileSync('cart.json'));
-        if(prodcutItems.length > 0) 
-              message = 'prodcutItem fetched successfully';
+          productItems = JSON.parse(fs.readFileSync('cart.json'));
+        if(productItems.length > 0) 
+              message = 'productItem fetched successfully';
         else
-              message = 'No prodcutItem found';      
+              message = 'No productItem found';      
         return res.status(200).json({
           message:message,
-          prodcutItem
+          productItem
         })
     }catch(err){
         return res.status(500).json({
@@ -35,6 +34,7 @@ router.get('/',(req,res)=>{
 router.post("/addItem",(req,res)=>{
     try{
         const filearray = fs.readdirSync(__dirname);
+        console.log(__dirname);
         let productItem = [];
         let error = '';
         if(filearray.includes('\cart.json'))
