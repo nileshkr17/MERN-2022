@@ -9,7 +9,7 @@ const router = express.Router();
     
 router.get("/",(req,res)=>
 {
-        
+        try{
              Cart.find().then((result)=>{
                   return res.status(200).json({
                      message:"Course fetched successfully",
@@ -21,9 +21,18 @@ router.get("/",(req,res)=>
                             error:err.message
                         })
                  })
-                
+        
 
-          })
+          }catch(err){
+                     res.status(500).json({
+                     message:"Something went wrong",
+                     error:err.message
+            })
+          }
+        
+           })
+        
+            
         
 //add############################################
 router.post("/addItem",(req,res)=>{
