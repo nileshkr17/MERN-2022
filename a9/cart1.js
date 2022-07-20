@@ -116,27 +116,44 @@ router.put("/update/:id",async(req,res)=>{
 
 }) 
 //delete##########################################
-router.delete('/deleteItem/:productName' , (req,res)=>{
-    const itemName = req.params.productName;
-    let items = JSON.parse(fs.readFileSync('cart.json'));
-    let deleted = items.filter(item=>item.productName == itemName);
-    items = items.filter(item=>item.productName!= itemName);
+// router.delete('/deleteItem/:productName' , (req,res)=>{
+//     const itemName = req.params.productName;
+//     let items = JSON.parse(fs.readFileSync('cart.json'));
+//     let deleted = items.filter(item=>item.productName == itemName);
+//     items = items.filter(item=>item.productName!= itemName);
 
-    fs.writeFile('cart.json', JSON.stringify(items) ,(err)=>{
-        if(err)
-            res.status(500).json({
-            message:"something went wrong",
-            error:err.message
+//     fs.writeFile('cart.json', JSON.stringify(items) ,(err)=>{
+//         if(err)
+//             res.status(500).json({
+//             message:"something went wrong",
+//             error:err.message
+//         })
+
+//     })
+//     res.status(200).json({
+//         message :"deleted data",
+//         deletedItem : deleted,
+//         data: items
+//     })
+
+// })
+
+
+router.delete("/delete/:id",async(req,res)=>{
+    try{
+        let data=await Cart.findByIdAndDelete(id);
+        return res.status(200).json({
+            message:"Data Delete Operation done!",
+            data
         })
 
-    })
-    res.status(200).json({
-        message :"deleted data",
-        deletedItem : deleted,
-        data: items
-    })
-
+    }catch(err)
+        {
+             return res.status(500).json({
+            messsge:" Something went wrong during Delete operation",
+            error:err.message
+            })
+        }   
 })
-
 
  module.exports = router
