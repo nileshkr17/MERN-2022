@@ -81,7 +81,7 @@ router.post("/addItem",(req,res)=>{
     }
 })
 
-
+//mongo remaining
 //update#########################################
 router.put("/update/:id", (req, res) => {
     var productName = req.params.productName;
