@@ -141,16 +141,16 @@ router.put("/update/:id",async(req,res)=>{
 
 router.delete("/delete/:id",async(req,res)=>{
     try{
-        let data=await Cart.findByIdAndDelete(id);
+        let item =await Cart.findByIdAndDelete(req.params.id);
         return res.status(200).json({
             message:"Data Delete Operation done!",
-            data
+            item
         })
 
     }catch(err)
         {
              return res.status(500).json({
-            messsge:" Something went wrong during Delete operation",
+            messsge: " Something went wrong during Delete operation",
             error:err.message
             })
         }   
