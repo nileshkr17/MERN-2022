@@ -2,45 +2,33 @@ const express = require('express');
 const fs = require('fs');
 const { v4: uuid_v4 } = require('uuid');
 uuid_v4();
-const randomUrl = require('random-url');
-const {Cart} = require('./Cart')
+//const randomUrl = require('random-url');
+const {Cart} = require('../a9/models/Cart');
 const router = express.Router();
-router.get('/',(req,res)=>{
-    try{
-        const filearray = fs.readdirSync(__dirname);
-        console.log(filearray);//cart.js
-        console.log(__dirname);//MERN-2022\check\routes
-        let productItem = [];
-        let message = '';
-        if(filearray.includes("cart.json"))
-          productItem = JSON.parse(fs.readFileSync("cart.json"));
-        if(productItem.length > 0) {
-            message = 'productItem fetched successfully';      
-        }
-              
-        else
-              message = 'No productItem found';      
-        return res.status(200).json({
-          message:message,
-          productItem
-        })
-    }catch(err){
-        return res.status(500).json({
-            message:"Something went wrong",
-            error:err.message
-        })
-    }
-})
 
+    
+router.get("/",(req,res)=>
+{
+        
+             Cart.find().then((result)=>{
+                  return res.status(200).json({
+                     message:"Course fetched successfully",
+                     result
+                     })
+                 }).catch((err)=>{
+                        return res.status(500).json({
+                            message:"Something went wrong",
+                            error:err.message
+                        })
+                 })
+                
+
+          })
+        
 //add############################################
 router.post("/addItem",(req,res)=>{
     try{
-        const filearray = fs.readdirSync(__dirname);
-        console.log(__dirname);
-        let productItem = [];
-        let error = '';
-        if(filearray.includes('\cart.json'))
-            productItem = JSON.parse(fs.readFileSync('cart.json'));
+       
 
         const { productName, productPrice, productDesc, productDateOfPurchase,productImage } = req.body;
         if(productName=='' && error == ''){
@@ -55,20 +43,26 @@ router.post("/addItem",(req,res)=>{
                 message:error
             })
         }
-        const cart = new Cart(uuid_v4(),productName,productPrice,productDesc,productDateOfPurchase,randomUrl());
-        productItem = [...productItem,cart];
-
-        fs.writeFile('cart.json',JSON.stringify(productItem),(err)=>{
-            if(err)
-                 res.status(500).json({
-                    message:'Something wrong while writing',
-                    error:err 
-                })
-            res.status(200).json({
-                message:"Item(s) saved successfully",
-                cart
-            })
+       const cartObj ={
+        productName,
+        productPrice,
+        productDesc,
+        productDateOfPurchase,
+        productImage
+       }
+       const cart = new Cart(cartObj);
+       cart.save().then((result)=>{
+            return res.status(500).json({
+                    message:"data saved",
+                    result
+                 })
+       }).catch((err)=>{
+        return res.status(500).json({
+            message:"something went wrong",
+            error:err.message
         })
+       })
+        
     
     }catch(err){
         res.status(500).json({
