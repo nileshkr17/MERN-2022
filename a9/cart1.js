@@ -1,8 +1,5 @@
 const express = require('express');
 const fs = require('fs');
-const { v4: uuid_v4 } = require('uuid');
-uuid_v4();
-const randomUrl = require('random-url');
 const {Cart} = require('../a9/models/Cart');
 const router = express.Router();
 
