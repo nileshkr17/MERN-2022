@@ -27,7 +27,6 @@ router.get("/",async(req,res)=>
            
 //add############################################
 router.post("/addItem",(req,res)=>{
-    try{
         const { productName, productPrice, productDesc, productDateOfPurchase} = req.body;
         if(productName=='' && error == ''){
             error="Missing CartItem Name";
@@ -47,6 +46,7 @@ router.post("/addItem",(req,res)=>{
         productDesc,
         productDateOfPurchase
        }
+       try{
        const cart = new Cart(cartObj);
        cart.save().then((result)=>{
             return res.status(500).json({
@@ -87,7 +87,7 @@ router.post("/addItem",(req,res)=>{
 //     })
 // })
 router.put("/update/:id",async(req,res)=>{
-    try{
+    
         const id = req.params.id;
         const {productName,productPrice,productDesc,productDateOfPurchase} = req.body;
          // let cartItem = await Cart.findByIdAndUpdate(id,(req.body)); //async op
@@ -102,6 +102,7 @@ router.put("/update/:id",async(req,res)=>{
         cart.productPrice = productPrice;
         cart.productDesc = productDesc;
         cart.productDateOfPurchase = productDateOfPurchase;
+        try{
         await cart.save();
         return res.status(200).json({
             message:"Data updated successfully",
@@ -115,6 +116,25 @@ router.put("/update/:id",async(req,res)=>{
     }
 
 }) 
+
+
+
+router.delete("/delete/:id",async(req,res)=>{
+    try{
+        let item =await Cart.findByIdAndDelete(req.params.id);
+        return res.status(200).json({
+            message:"Data Delete Operation done!",
+            item
+        })
+
+    }catch(err)
+        {
+             return res.status(500).json({
+            messsge: " Something went wrong during Delete operation",
+            error:err.message
+            })
+        }   
+})
 //delete##########################################
 // router.delete('/deleteItem/:productName' , (req,res)=>{
 //     const itemName = req.params.productName;
@@ -138,22 +158,5 @@ router.put("/update/:id",async(req,res)=>{
 
 // })
 
-
-router.delete("/delete/:id",async(req,res)=>{
-    try{
-        let item =await Cart.findByIdAndDelete(req.params.id);
-        return res.status(200).json({
-            message:"Data Delete Operation done!",
-            item
-        })
-
-    }catch(err)
-        {
-             return res.status(500).json({
-            messsge: " Something went wrong during Delete operation",
-            error:err.message
-            })
-        }   
-})
 
  module.exports = router
