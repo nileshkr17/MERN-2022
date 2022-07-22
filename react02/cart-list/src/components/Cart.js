@@ -1,4 +1,5 @@
 import React from 'react';
+import './cart.css';
  export const Cart = ()=>{
     return(
         <div>
@@ -12,6 +13,6 @@ import React from 'react';
                 <div className='Source'>Link</div>
             </div>
             </body>
-\       </div>
+       </div>
     )
  }
