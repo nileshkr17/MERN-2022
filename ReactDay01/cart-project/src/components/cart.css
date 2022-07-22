@@ -6,13 +6,20 @@
     background: black;
 }
 .CartContainer{
-    width: 30%;
     float: left;
     margin: 10px 10px;
     box-shadow: 10px 10px 10px 10px #cccc;
     padding: 10px;
     border-radius: 15px;
+    width: 320px;
+    height: 360px;
 }
+/* height: auto;
+max-height: 250px;
+width: auto;
+max-width: 250px; */
+
+
 .CartTitle{
     font-weight: bold;
     font-size: 25px;
@@ -25,8 +32,10 @@
 
 }
 .CartImg img{
-    width: 100%;
+    max-width: 320px;
+    max-height: 200px;
     border-radius: 10px;
+    height: auto;
 }
 .CartPrice{
     font-weight:bold;
