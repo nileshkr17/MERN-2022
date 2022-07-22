@@ -1,5 +1,5 @@
 import React from 'react';
-import {Cart} from './components/Cart';
+import {Cart} from './components/cart/Cart';
 
 function App() {
   const cartArr=[
@@ -58,16 +58,24 @@ function App() {
   return (
     <div className="App">
       <h1 id='navbar'>List of movies</h1>
-      <Cart ProductName={cartArr[0].ProductName} ProductImg={cartArr[0].ProductImg} ProductPrice={cartArr[0].ProductPrice} ProductRating={cartArr[0].ProductRating}/>
+      {cartArr.map((cart,index)=>
+      <Cart key={index} ProductName={cart.ProductName}
+       ProductImg={cart.ProductImg} 
+       ProductPrice={cart.ProductPrice} 
+       ProductRating={cart.ProductRating}/>)
+      }
+    </div>
+  );
+}
+
+export default App;
+
+
+/* <Cart ProductName={cartArr[0].ProductName} ProductImg={cartArr[0].ProductImg} ProductPrice={cartArr[0].ProductPrice} ProductRating={cartArr[0].ProductRating}/>
       <Cart ProductName={cartArr[1].ProductName} ProductImg={cartArr[1].ProductImg} ProductPrice={cartArr[1].ProductPrice} ProductRating={cartArr[1].ProductRating}/>
       <Cart ProductName={cartArr[2].ProductName} ProductImg={cartArr[2].ProductImg} ProductPrice={cartArr[2].ProductPrice} ProductRating={cartArr[2].ProductRating}/>
       <Cart ProductName={cartArr[3].ProductName} ProductImg={cartArr[3].ProductImg} ProductPrice={cartArr[3].ProductPrice} ProductRating={cartArr[3].ProductRating}/>
       <Cart ProductName={cartArr[4].ProductName} ProductImg={cartArr[4].ProductImg} ProductPrice={cartArr[4].ProductPrice} ProductRating={cartArr[4].ProductRating}/>
       <Cart ProductName={cartArr[5].ProductName} ProductImg={cartArr[5].ProductImg} ProductPrice={cartArr[5].ProductPrice} ProductRating={cartArr[5].ProductRating}/>
       <Cart ProductName={cartArr[6].ProductName} ProductImg={cartArr[6].ProductImg} ProductPrice={cartArr[6].ProductPrice} ProductRating={cartArr[6].ProductRating}/>
-      <Cart ProductName={cartArr[7].ProductName} ProductImg={cartArr[7].ProductImg} ProductPrice={cartArr[7].ProductPrice} ProductRating={cartArr[7].ProductRating}/>
-    </div>
-  );
-}
-
-export default App;
+      <Cart ProductName={cartArr[7].ProductName} ProductImg={cartArr[7].ProductImg} ProductPrice={cartArr[7].ProductPrice} ProductRating={cartArr[7].ProductRating}/> */
