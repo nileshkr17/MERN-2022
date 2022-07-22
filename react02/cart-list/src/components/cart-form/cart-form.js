@@ -6,14 +6,6 @@ export const CartForm = ()=>{
     // const [productImage,setProductImage] = useState('');
     // const [productRating,setProductRating] = useState('');
 
-const FormSubHandler=(event)=>{
-    let err=''
-    if(formInput.productName==''&& err==''){
-        err='Enter the name then press enter';
-    }
-    console.log(formInput);
-    event.preventDefault();
-}
 
  const [formInput,setFormInput] = useState({
         productName:'',
@@ -47,11 +39,21 @@ const FormSubHandler=(event)=>{
             productRating:event.target.value
         });
     }
-    console.log(`product name: ${formInput.productName} product price: ${formInput.productPrice} product image: ${formInput.productImage} product rating: ${formInput.productRating}`);
+    const formSubHandler=(event)=>{
+        let err=''
+        if(formInput.productName===''&& err===''){
+            err='Enter the name then press enter';
+            console.log(err);
+        }
+        console.log(formInput);
+        event.preventDefault();
+    }
+    
+    
     return(
         <div className='FormCont'>
             <h2>Add New Movies</h2>
-            <form>
+            <form onSubmit={formSubHandler}>
                 <div className='input'>
                     <input type="text" placeholder='Movie/series' onChange={ProductNameHandler}/>
 
@@ -69,7 +71,7 @@ const FormSubHandler=(event)=>{
                     
                 </div>
                 <div className='input'>
-                    <button className='btn-add' onSubmit={FormSubHandler}>Add Item</button>
+                    <button className='btn-add'>Add Item</button>
                 </div>
             </form>
         
