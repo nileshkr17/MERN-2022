@@ -58,15 +58,17 @@ function App() {
   ]
   return (
     <div className="App">
+
       <h1 id='navbar'>List of movies</h1>
+      <CartForm></CartForm>
       {cartArr.map((cart,index)=>
       <Cart key={index} ProductName={cart.ProductName}
        ProductImg={cart.ProductImg} 
        ProductPrice={cart.ProductPrice} 
        ProductRating={cart.ProductRating}/>)
       }
-      <h2>Add New Movies</h2>
-      <CartForm></CartForm>
+      
+  
     </div>
   
   );
