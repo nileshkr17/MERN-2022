@@ -1,6 +1,17 @@
+.{
+    margin: 0px;
+    padding: 0px;
+}
+/* .h1{
+    background: black;
+} */
 .CartContainer{
-    width: 20%;
+    width: 30%;
     float: left;
+    margin: 10px 10px;
+    box-shadow: 10px 10px 10px 10px #cccc;
+    padding: 10px;
+    border-radius: 15px;
 }
 .CartTitle{
     font-weight: bold;
@@ -10,10 +21,12 @@
 }
 .CartImg{
     width: 100%;
+    
 
 }
 .CartImg img{
     width: 100%;
+    border-radius: 10px;
 }
 .CartPrice{
     font-weight:bold;
@@ -26,4 +39,21 @@
     font-size: 16px;
     width: 50%;
     float: left;
+    text-align: right;
+}
+
+.BuyContainer{
+    text-align: right;
+    width: 100%;
+}
+.BuyNow{
+    background: #055393;
+    border: 2px solid #087ede;
+    margin-top: 20px;
+    padding: 10px;
+    color: #fff;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 12px;
+
 }
