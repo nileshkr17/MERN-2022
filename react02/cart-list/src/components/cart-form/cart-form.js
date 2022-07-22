@@ -1,4 +1,4 @@
-import React,{ useState } from "react";
+import React,{ useState }from "react";
 import './form.css';
 export const CartForm = ()=>{
     // const [productName,setProductName] = useState('');
@@ -6,7 +6,14 @@ export const CartForm = ()=>{
     // const [productImage,setProductImage] = useState('');
     // const [productRating,setProductRating] = useState('');
 
-
+const FormSubHandler=(event)=>{
+    let err=''
+    if(formInput.productName==''&& err==''){
+        err='Enter the name then press enter';
+    }
+    console.log(formInput);
+    event.preventDefault();
+}
 
  const [formInput,setFormInput] = useState({
         productName:'',
@@ -62,7 +69,7 @@ export const CartForm = ()=>{
                     
                 </div>
                 <div className='input'>
-                    <button className='btn-add'>Add Item</button>
+                    <button className='btn-add' onSubmit={FormSubHandler}>Add Item</button>
                 </div>
             </form>
         
