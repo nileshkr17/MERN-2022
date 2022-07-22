@@ -1,4 +1,21 @@
 .CartContainer{
         width: 16%;
         float: left;
+        margin: 30px;
+        padding: 20px;
+    }
+.ItemName{
+    font-weight: bold;
+    font-size: 25px;
+    color: black;
+
+}
+.ProductImage{
+   width: 100%;
+   height: 100%;
+}
+.ProductImage img{
+    max-width:20rem;
+    max-height:10rem;
+    
 }
