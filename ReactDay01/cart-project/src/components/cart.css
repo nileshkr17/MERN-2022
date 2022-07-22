@@ -1,4 +1,4 @@
-.{
+*{
     margin: 0px;
     padding: 0px;
 }
@@ -47,8 +47,8 @@
     width: 100%;
 }
 .BuyNow{
-    background: #055393;
-    border: 2px solid #087ede;
+    background: #9c33d0;
+    border: 2px solid black;
     margin-top: 20px;
     padding: 10px;
     color: #fff;

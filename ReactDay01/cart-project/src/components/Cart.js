@@ -4,11 +4,10 @@ export const Cart = ()=>{
       
             const cart ={
                 ProductName:"Laptop",
-                ProductImg:"https://www.rlogical.com/wp-content/uploads/2020/12/MERN-Stack-considered-the-Best-for-Developing-Web-Apps.png",
+                ProductImg:"https://photos5.appleinsider.com/gallery/48932-95693-M2-MacBook-Air-display-xl.jpg",
                 ProductPrice:'10',
                 ItemCompany:'Mac Book Pro M1'
-
-                    }
+            }
     return(
     <div>
          <div className='CartContainer'>
