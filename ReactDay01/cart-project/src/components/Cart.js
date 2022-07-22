@@ -1,6 +1,6 @@
 import React  from "react";
 import './Cart.css';
-export const Cart = ()=>{
+export const Cart = (props)=>{
       
             const cart ={
                 ProductName:"Laptop",
@@ -10,13 +10,15 @@ export const Cart = ()=>{
             }
     return(
     <div>
+
+
          <div className='CartContainer'>
-            <div className='CartTitle'>{cart.ProductName}</div>
+            <div className='CartTitle'>{props.ProductName}</div>
             <div className='CartImg'>
-                <img src={cart.ProductImg} alt="description of image"/>
+                <img src={props.ProductImg} alt="description of image"/>
             </div>
-            <div className='CartPrice'>{cart.ProductPrice}</div>
-            <div className='ItemCompany'>{cart.ItemCompany}</div>
+            <div className='CartPrice'>{props.ProductPrice}</div>
+            <div className='ItemCompany'>{props.ItemCompany}</div>
             <div className="BuyButtonContainer">
                 <button className="BuyNow">Buy Now</button>
                

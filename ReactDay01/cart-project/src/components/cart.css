@@ -2,9 +2,9 @@
     margin: 0px;
     padding: 0px;
 }
-/* .h1{
+.h1{
     background: black;
-} */
+}
 .CartContainer{
     width: 30%;
     float: left;
@@ -16,7 +16,7 @@
 .CartTitle{
     font-weight: bold;
     font-size: 25px;
-    color: #055393;
+    color: black;
 
 }
 .CartImg{
@@ -46,6 +46,7 @@
     text-align: right;
     width: 100%;
 }
+.BuyNow:hover {opacity: 0.6}
 .BuyNow{
     background: #9c33d0;
     border: 2px solid black;
