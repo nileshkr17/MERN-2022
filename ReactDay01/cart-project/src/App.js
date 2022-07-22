@@ -4,7 +4,9 @@ function App() {
     <div className="App">
         <h1>Mern Stack Course</h1>
         <Cart/>
-        
+        <Cart/>
+        <Cart/>
+        <Cart/>
     </div>
   );
 }
