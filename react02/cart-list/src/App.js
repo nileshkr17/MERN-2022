@@ -1,10 +1,10 @@
 import './App.css';
-import '{Cart}' from ''
+import {Cart} from './components/Cart';
 
 function App() {
   return (
     <div className="App">
-      <h1>new page</h1>
+      <h1>List of movies</h1>
     </div>
   );
 }
