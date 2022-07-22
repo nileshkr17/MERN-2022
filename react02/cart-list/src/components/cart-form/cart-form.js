@@ -1,6 +1,6 @@
 import React,{ useState }from "react";
 import './form.css';
-export const CartForm = ()=>{
+export const CartForm = (props)=>{
     // const [productName,setProductName] = useState('');
     // const [productPrice,setProductPrice] = useState('');
     // const [productImage,setProductImage] = useState('');
@@ -46,6 +46,7 @@ export const CartForm = ()=>{
             console.log(err);
         }
         console.log(formInput);
+        props.OnNewItem(formInput);
         event.preventDefault();
     }
     

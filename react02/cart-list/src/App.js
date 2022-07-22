@@ -56,11 +56,17 @@ function App() {
       ProductRating:'Must Watch!'
     }
   ]
+  const addnewItem=(Item)=>{
+    console.log(Item);
+    const ItemObj = {
+      ProductName: 
+    }
+  }
   return (
     <div className="App">
 
       <h1 id='navbar'>List of movies</h1>
-      <CartForm></CartForm>
+       <CartForm OnNewItem = {addnewItem}/>
       {cartArr.map((cart,index)=>
       <Cart key={index} ProductName={cart.ProductName}
        ProductImg={cart.ProductImg} 
