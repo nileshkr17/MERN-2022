@@ -1,5 +1,5 @@
 import {Cart} from './components/Cart'
-import{head} from './components/head'
+//import{head} from './components/head'
 function App() {
   const cartArr=[
     {
