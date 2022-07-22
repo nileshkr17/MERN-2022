@@ -1,4 +1,29 @@
 .CartContainer{
-    width: 25%;
+    width: 20%;
+    float: left;
+}
+.CartTitle{
+    font-weight: bold;
+    font-size: 25px;
+    color: #055393;
+
+}
+.CartImg{
+    width: 100%;
+
+}
+.CartImg img{
+    width: 100%;
+}
+.CartPrice{
+    font-weight:bold;
+    font-size: 16px;
+    width: 50%;
+    float: left;
+}
+.ItemCompany{
+    font-weight: bold;
+    font-size: 16px;
+    width: 50%;
     float: left;
 }
