@@ -8,40 +8,40 @@ export const CartForm = (props)=>{
 
 
  const [formInput,setFormInput] = useState({
-        productName:'',
-        productPrice:'',
-        productImage:'',
-        productRating:''
+        ProductName:'',
+        ProductPrice:'',
+        ProductImage:'',
+        ProductRating:''
  })
     const ProductNameHandler = (event)=>{
         
             setFormInput({
                 ...formInput,
-                productName:event.target.value
+                ProductName:event.target.value
             });
     }
     const ProductPriceHandler = (event)=>{
         setFormInput({
             ...formInput, //lost values to undefined
-            productPrice:event.target.value
+            ProductPrice:event.target.value
         });
     }
     const ProductImageHandler = (event)=>{
         setFormInput({
             ...formInput,
-            productImage:event.target.value
+            ProductImage:event.target.value
         });
 
     }
     const ProductRatingHandler = (event)=>{
         setFormInput({
             ...formInput,
-            productRating:event.target.value
+            ProductRating:event.target.value
         });
     }
     const formSubHandler=(event)=>{
         let err=''
-        if(formInput.productName===''&& err===''){
+        if(formInput.ProductName===''&& err===''){
             err='Enter the name then press enter';
             console.log(err);
         }
@@ -56,7 +56,7 @@ export const CartForm = (props)=>{
             <h2>Add New Movies</h2>
             <form onSubmit={formSubHandler}>
                 <div className='input'>
-                    <input type="text" placeholder='Movie/series' onChange={ProductNameHandler}/>
+                    <input type="text" placeholder='Name' onChange={ProductNameHandler}/>
 
                 </div>
                 <div className='input'>

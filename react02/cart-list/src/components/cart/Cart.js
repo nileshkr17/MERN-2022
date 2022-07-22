@@ -9,7 +9,7 @@ import './cart.css';
             <div className='CartContainer'>
                 <div className='ItemName'>{props.ProductName}</div>
                 <div className='ProductImage'>
-                    <img src={props.ProductImg}/>
+                    <img src={props.ProductImage}/>
                 </div>
                 <div className='ProductRating'>{props.ProductRating}</div>
                 <div className='ProductPrice'>{props.ProductPrice}</div>
@@ -17,6 +17,6 @@ import './cart.css';
                 <button className='Source'>Link</button>
             </div>
             </body>
-       </div>
+       </div> 
     )
     }
