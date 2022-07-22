@@ -1,9 +1,12 @@
 .FormCont{
-    width: 50%;
-    box-radius:10px;
-    background-color: azure;
-    margin: 20px;
-    box-shadow: 10px 10px 10px ;
+    float: left;
+    margin: 10px;
+    box-shadow: 10px 10px 10px 10px #5d090915 ;
+    padding: 10px;
+    border-radius: 25px;
+    width: 320px;
+    height: 320px;
+    background: #221f1f;
 }
 
 .input{
