@@ -1,11 +1,10 @@
-import './App.css';
-import HelloWorld from './components/HelloWorld';
-
+import {Cart} from './components/Cart'
 function App() {
   return (
     <div className="App">
         <h1>Mern Stack Course</h1>
-        <HelloWorld/>
+        <Cart/>
+        
     </div>
   );
 }
