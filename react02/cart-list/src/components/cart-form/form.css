@@ -1,0 +1,22 @@
+.FormCont{
+    width: 50%;
+    box-radius:10px;
+    background-color: azure;
+    margin: 20px;
+    box-shadow: 10px 10px 10px ;
+}
+
+.input{
+    width:50%;
+    padding: 10px;
+    float: left;
+}
+.clearfix{
+    clear:both;
+}
+input[type='text']{
+    width: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+    border: none;
+    border-radius: 5px;
+}

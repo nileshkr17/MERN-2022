@@ -1,4 +1,5 @@
 import React from 'react';
+import { CartForm } from './components/cart-form/cart-form';
 import {Cart} from './components/cart/Cart';
 
 function App() {
@@ -64,7 +65,10 @@ function App() {
        ProductPrice={cart.ProductPrice} 
        ProductRating={cart.ProductRating}/>)
       }
+      <h2>Add New Movies</h2>
+      <CartForm></CartForm>
     </div>
+  
   );
 }
 
