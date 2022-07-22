@@ -9,6 +9,10 @@ function App() {
       <Cart/>
       <Cart/>
       <Cart/>
+      <Cart/>
+      <Cart/>
+      <Cart/>
+      <Cart/>
     </div>
   );
 }
