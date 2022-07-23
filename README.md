@@ -34,3 +34,10 @@ cd mern-2022
 nodemon server.js
 # or: nodemon -x 'npm run lint; node server.js'
 ```
+
+Day 11:
+![Netflix-react]![image](https://user-images.githubusercontent.com/77370375/180591164-1cffc11b-92c1-4631-adbe-c6f4ed758f22.png)
+
+
+
+
