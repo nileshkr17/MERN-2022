@@ -6,11 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #c5121b;
-}
-.demo-bg {
-  opacity: 0.6;
-  width: 100%;
-  height: auto;
+  background-image: url(https://raw.githubusercontent.com/AhmedTohamy01/React-Netflix-Clone/master/public/images/misc/home-bg.jpg);
 }
 
 code {
