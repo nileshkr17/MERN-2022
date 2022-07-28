@@ -12,7 +12,7 @@ import './cart.css';
                     <img src={props.ProductImage}/>
                 </div>
                 <div className='ProductRating'>{props.ProductRating}</div>
-                <div className='ProductPrice'>{props.ProductPrice}</div>
+                <div className='ProductPrice'>${props.ProductPrice}</div>
                 <div className='Btn'></div>
                 <button className='Source'>Link</button>
             </div>
