@@ -1,10 +1,14 @@
-import React, { useState } from "react";
-import CartContext from "./CartContext";
-export const CartState = (props)=>{
-    const [cartItem,setCarts] = useState([])
-    return(
-        <CartContext.Provider value={{cartItem,setCarts}}>
-            {props.children}
-        </CartContext.Provider>
-    )
+//CartState.js
+import React ,{useState}from 'react'
+import CartContext from './CartContext'
+
+export const CartState = (props) => {
+
+    let [cartItems,setCartItems]=useState([])
+
+  return (
+    <CartContext.Provider value={{cartItems,setCartItems}}>
+        {props.children}
+    </CartContext.Provider>
+  )
 }

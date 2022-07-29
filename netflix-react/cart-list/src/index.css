@@ -5,22 +5,14 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #c5121b;
-  background-image: url(https://raw.githubusercontent.com/AhmedTohamy01/React-Netflix-Clone/master/public/images/misc/home-bg.jpg);
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-h1{
-  color: #c5121b;
-  background:#221f1f; 
-  padding: 35px;
-  font-size: 3rem;
-  text-align: center;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif
-}
+
 *{
   padding: 0px;
   margin: 0px;

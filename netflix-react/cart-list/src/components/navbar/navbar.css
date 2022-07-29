@@ -1,0 +1,54 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.cart{
+    float: right;
+    width: 30px;
+    height: 30px;
+    
+}
+.shopping-cart{
+    float:right;
+    background-color: aliceblue;
+    border: 2px solid #000;
+    border-radius: 40px;
+}
+.shopping-cart:hover{
+    background-color: rgb(90, 90, 223);
+
+}
+.logo{
+    height: 10%;
+    width:10%;
+    border-radius: 50%;
+    float: left;
+}
+.number{
+    float: left;
+    width: 30px;
+    height: 30px;
+    color: aliceblue;
+    border: 2px solid black;
+    background-color: black;
+    border-radius: 100px;
+    font-weight: bold;
+    text-align: center;
+}
+.navbar{
+    width: 100%;
+    border: 2px solid#020024;
+    background-color: black;
+    
+}
+.navbar-nav{
+    align-items: right;
+   
+}
+
+.nav-link:hover {
+    background-color: rgb(90, 90, 223);
+    border-radius: 10px;
+    color: #000;
+}

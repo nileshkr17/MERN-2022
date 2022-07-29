@@ -1,35 +1,61 @@
-import  { useState, useEffect } from 'react';
-import { CartForm } from './components/cart-form/cart-form';
-import { CartList } from './components/Cart-list/CartList';
-import {Cart} from './components/cart/Cart';
-import { CartState } from './components/store/CartState';
-import {Routes,Route,Link} from 'react-router-dom';
-import { useNavigate } from 'react-router-dom'
-import { Navbar } from './components/navbar/Navbar';
-import './index.css';
-function App() {
-      let navigate = useNavigate()
-  return (
-    <div className="App">
-    <h1 id='navbar'>List of movies</h1>
-       <nav>
-        <ul>
-          <li><Link to='/'> Product List</Link></li>
-          <li><Link to='/add'> Add Product</Link></li>
-           </ul>
-      </nav>
-      <button onClick={()=>navigate('/add')}>Go to add Product</button>
-      <CartState>
-        <Routes>
-          <Route path="/" element={<CartList/>}/>
-          <Route path="/add" element={<CartForm/>}/>
-        </Routes>
-       </CartState>
+//App.js
+import React from 'react';
+import{ useState,useEffect } from 'react';
+import './App.css';
+import { Navbar } from './components/Navbar/Navbar';
+import {ProductForm} from './components/productForm/ProductForm';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css'
+import { ProductList } from './components/ProductList/ProductList';
+import { ProductState } from './components/Store/ProductState';
+import {Routes,Route, Link, useNavigate} from 'react-router-dom';
+import { LoginForm } from './components/Admin/LoginForm';
+import { Cart } from './components/Cart/Cart';
+import { RegisterForm } from './components/Admin/RegisterForm';
+import { EditProductList } from './components/Admin/EditProductList';
+import { UpdateForm } from './components/Admin/UpdateProduct';
+import { CartState } from './components/Store/CartState';
+import { EditState } from './components/Store/EditState';
+import { AuthState } from './components/Store/Auth/AuthState';
+import { ProtectRoute } from './components/Admin/ProtectRoute';
+import Footer from './components/footer/Footer';
 
+function App() {
+  let navigate= useNavigate()
+  return (
+    
+    <div className='App' >
+      <ProductState>
+        <CartState>
+          <EditState>
+          <AuthState>
+          <Navbar/>
+          {/* <Home/> */}
+          
+          <Routes>
+              <Route path='/' element={<ProductList/>}></Route>
+              <Route path='/admin/register' element={<RegisterForm/>}></Route>
+              <Route path='/admin/login' element={<LoginForm/>}></Route>
+              
+              
+              <Route element={<ProtectRoute></ProtectRoute>}>
+              <Route path='/product/cart' element={<Cart/>}></Route>
+              <Route path='/admin/product/edit' element={<EditProductList/>}></Route>
+              <Route path='/admin/product/edit/update'element={<UpdateForm/>}></Route>
+              <Route path='/admin/product/add' element={<ProductForm />}></Route>
+              </Route>
+
+
+          </Routes>
+          <Footer/>
+          </AuthState>
+          </EditState>
+        </CartState>
+      </ProductState>
+      
     </div>
-  
+    
   );
 }
 
-export default App;
 
+export default App;
